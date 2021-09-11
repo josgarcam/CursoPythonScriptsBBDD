@@ -1,0 +1,64 @@
+--
+-- PostgreSQL database dump
+--
+
+-- Dumped from database version 13.4
+-- Dumped by pg_dump version 13.4
+
+-- Started on 2021-08-26 19:28:07
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
+SET check_function_bodies = false;
+SET xmloption = content;
+SET client_min_messages = warning;
+SET row_security = off;
+
+SET default_tablespace = '';
+
+SET default_table_access_method = heap;
+
+--
+-- TOC entry 205 (class 1259 OID 16757)
+-- Name: matriculas; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE public.matriculas (
+    mat_id integer DEFAULT nextval('public.mat_seq'::regclass) NOT NULL,
+    mat_numero character varying,
+    mat_fecha_mat date,
+    mat_bastidor integer
+);
+
+
+ALTER TABLE public.matriculas OWNER TO postgres;
+
+--
+-- TOC entry 2993 (class 0 OID 16757)
+-- Dependencies: 205
+-- Data for Name: matriculas; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+INSERT INTO public.matriculas (mat_id, mat_numero, mat_fecha_mat, mat_bastidor) VALUES (1, '1234MMM', '2014-05-06', 111111);
+INSERT INTO public.matriculas (mat_id, mat_numero, mat_fecha_mat, mat_bastidor) VALUES (2, '9999NNN', '2015-12-16', 222222);
+INSERT INTO public.matriculas (mat_id, mat_numero, mat_fecha_mat, mat_bastidor) VALUES (3, '6666KKK', '2020-01-26', 333333);
+INSERT INTO public.matriculas (mat_id, mat_numero, mat_fecha_mat, mat_bastidor) VALUES (4, '1234ABC', '2015-04-26', 444444);
+INSERT INTO public.matriculas (mat_id, mat_numero, mat_fecha_mat, mat_bastidor) VALUES (5, '9876ZYX', '2021-04-02', 555555);
+INSERT INTO public.matriculas (mat_id, mat_numero, mat_fecha_mat, mat_bastidor) VALUES (6, '9999AAA', '2011-12-22', 666666);
+INSERT INTO public.matriculas (mat_id, mat_numero, mat_fecha_mat, mat_bastidor) VALUES (7, '0000ZZZ', '2017-01-12', 777777);
+INSERT INTO public.matriculas (mat_id, mat_numero, mat_fecha_mat, mat_bastidor) VALUES (8, '8888BBB', '2013-11-22', 888888);
+INSERT INTO public.matriculas (mat_id, mat_numero, mat_fecha_mat, mat_bastidor) VALUES (9, '7777CCC', '2003-11-15', 999999);
+INSERT INTO public.matriculas (mat_id, mat_numero, mat_fecha_mat, mat_bastidor) VALUES (10, '2222RRR', '2009-01-25', 10101010);
+INSERT INTO public.matriculas (mat_id, mat_numero, mat_fecha_mat, mat_bastidor) VALUES (11, '3333VVV', '2019-10-13', 110011001);
+
+
+-- Completed on 2021-08-26 19:28:07
+
+--
+-- PostgreSQL database dump complete
+--
+
