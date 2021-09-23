@@ -5,7 +5,7 @@
 -- Dumped from database version 13.4
 -- Dumped by pg_dump version 13.4
 
--- Started on 2021-09-23 18:02:35
+-- Started on 2021-09-23 18:24:08
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -45,14 +45,12 @@ ALTER TABLE public.motos OWNER TO postgres;
 -- Data for Name: motos; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.motos (mot_id, mot_marca, mot_modelo, mot_cilindrada, mot_kms, mot_matricula) FROM stdin;
-1	Aprilia	RS 125	2500	3600	1234MMM
-2	Aprilia	RS V4	2800	600	9999NNN
-3	BMW	C 400 GT	3200	10600	6666KKK
-\.
+INSERT INTO public.motos VALUES (1, 'Aprilia', 'RS 125', 2500, 3600, '1234MMM');
+INSERT INTO public.motos VALUES (2, 'Aprilia', 'RS V4', 2800, 600, '9999NNN');
+INSERT INTO public.motos VALUES (3, 'BMW', 'C 400 GT', 3200, 10600, '6666KKK');
 
 
--- Completed on 2021-09-23 18:02:35
+-- Completed on 2021-09-23 18:24:09
 
 --
 -- PostgreSQL database dump complete

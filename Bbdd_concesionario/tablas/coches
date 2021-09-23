@@ -5,7 +5,7 @@
 -- Dumped from database version 13.4
 -- Dumped by pg_dump version 13.4
 
--- Started on 2021-09-23 18:02:04
+-- Started on 2021-09-23 18:23:38
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -45,16 +45,14 @@ ALTER TABLE public.coches OWNER TO postgres;
 -- Data for Name: coches; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.coches (coc_id, coc_marca, coc_modelo, coc_cilindrada, coc_kms, coc_matricula) FROM stdin;
-1	Seat	Ibiza	1600	99000	1234ABC
-2	Seat	Ibiza	1600	20000	9876ZYX
-3	Skoda	Scala	1100	200	9999AAA
-4	Opel	Mokka	1700	150000	0000ZZZ
-5	Opel	Insignia	2100	15000	8888BBB
-6	Renault	Clio	11000	65000	7777CCC
-7	Mercedes	Clase C	2700	1000	2222RRR
-8	BMW	Serie 3	2900	89000	3333VVV
-\.
+INSERT INTO public.coches VALUES (1, 'Seat', 'Ibiza', 1600, 99000, '1234ABC');
+INSERT INTO public.coches VALUES (2, 'Seat', 'Ibiza', 1600, 20000, '9876ZYX');
+INSERT INTO public.coches VALUES (3, 'Skoda', 'Scala', 1100, 200, '9999AAA');
+INSERT INTO public.coches VALUES (4, 'Opel', 'Mokka', 1700, 150000, '0000ZZZ');
+INSERT INTO public.coches VALUES (5, 'Opel', 'Insignia', 2100, 15000, '8888BBB');
+INSERT INTO public.coches VALUES (6, 'Renault', 'Clio', 11000, 65000, '7777CCC');
+INSERT INTO public.coches VALUES (7, 'Mercedes', 'Clase C', 2700, 1000, '2222RRR');
+INSERT INTO public.coches VALUES (8, 'BMW', 'Serie 3', 2900, 89000, '3333VVV');
 
 
 --
@@ -66,7 +64,7 @@ ALTER TABLE ONLY public.coches
     ADD CONSTRAINT coches_pkey PRIMARY KEY (coc_id);
 
 
--- Completed on 2021-09-23 18:02:04
+-- Completed on 2021-09-23 18:23:38
 
 --
 -- PostgreSQL database dump complete
